@@ -1,0 +1,14 @@
+.carousel_contenair{
+    border: solid black 2px;
+}
+.picture_contenair{
+    max-width: 300px;
+    padding: 20px;
+    margin: 0;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px rgb(104, 53, 243);
+}
+.picture_contenair img {
+    max-width: 100%;
+    height: auto;
+}

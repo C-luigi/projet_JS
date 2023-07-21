@@ -7,3 +7,9 @@ main{
 footer{
   background: blanchedalmond;
 }
+.nav_bar {
+  border: solid black 2px;
+}
+.border {
+  border: solid black 2px;
+}
