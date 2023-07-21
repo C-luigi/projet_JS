@@ -11,7 +11,9 @@
 </head>
 <body>
 <header>
-  <h1>Blog articles en tous genres</h1>
+  <div class="title">
+    <h1>Blog articles en tous genres</h1>
+  </div>
   <div class="nav_bar">
     <a href="home.html">Accueil</a>
     <a href="gallery.html">Galerie</a>
@@ -21,13 +23,11 @@
 <main>
   <section class="formulaire_contenair">
     <form>
-      <label for="pseudo">Nom d'utilisateur</label>
-      <input type="text" id="pseudo" name="author_id"><br>
       <label>Titre :
-        <textarea name="title" placeholder="Titre d'article en 40 caractères" rows="5"></textarea><br>
+        <textarea name="title" placeholder="Votre blague" rows="5"></textarea><br>
       </label>
-      <label>Contenu :
-        <textarea name="txtart" placeholder="Contenu de l'article sur 150 caractères" rows="5"></textarea><br>
+      <label>réponse :
+        <textarea name="txtart" placeholder="Votre réponse à la blague" rows="2"></textarea><br>
       </label>
       <input type="submit" name="submit_button" value="Poster">
     </form>

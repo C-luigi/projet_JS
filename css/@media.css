@@ -1,4 +1,8 @@
 @media only screen and (min-width: 480px) {
+    header{
+        display: flex;
+        justify-content: space-between;
+    }
     footer{
         display: flex;
         justify-content: space-evenly;
