@@ -14,10 +14,13 @@
   <div class="title">
     <h1>Blog articles en tous genres</h1>
   </div>
-  <div class="nav_bar">
-    <a href="home.html">Accueil</a>
-    <a href="gallery.html">Galerie</a>
-    <a href="game.html">Jeux</a>
+  <div class="dropdown">
+    <button id="dropdownButton" class="dropdown-button">Menu</button>
+    <div id="dropdownMenu" style="display: none;" class="dropdown-content">
+      <a href="home.html">Accueil</a>
+      <a href="gallery.html">Galerie</a>
+      <a href="game.html">Jeux</a>
+    </div>
   </div>
 </header>
 <main>
@@ -77,6 +80,18 @@
     }
   }
   fetchUsers()
+  let dropdownButton = document.getElementById('dropdownButton');
+  let dropdownMenu = document.getElementById('dropdownMenu');
+
+  dropdownButton.addEventListener('click', function() {
+    let displayStyle = dropdownMenu.style.display;
+
+    if(displayStyle === "none") {
+      dropdownMenu.style.display = "block";
+    } else {
+      dropdownMenu.style.display = "none";
+    }
+  });
 </script>
 </body>
 </html>
