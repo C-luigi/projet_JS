@@ -25,14 +25,14 @@
 </header>
 <main>
   <section class="formulaire_contenair">
-    <form>
-      <label>Titre :
-        <textarea name="title" placeholder="Votre blague" rows="5"></textarea><br>
+    <form id="formulaire">
+      <label>Blague :
+        <textarea name="joke" placeholder="Votre blague" rows="2"></textarea><br>
       </label>
       <label>réponse :
-        <textarea name="txtart" placeholder="Votre réponse à la blague" rows="2"></textarea><br>
+        <textarea name="answer" placeholder="Votre réponse à la blague" rows="2"></textarea><br>
       </label>
-      <input type="submit" name="submit_button" value="Poster">
+      <input type="submit" id="postBouton" name="submit_button" value="Poster">
     </form>
   </section>
   <section class="feed_contenair">
@@ -59,27 +59,7 @@
     </ul>
   </div>
 </footer>
-<script>
-  async function fetchUsers() {
-    const r = await fetch('https://v2.jokeapi.dev/joke/Any?lang=fr&amount=10');
-    if (r.ok === true) {
-      const json = await r.json();
-      // for (let i = 0; i < r.json(); i++){
-      for (const joke of json.jokes) {
-        console.log(joke)
-        const art = document.querySelector('article');
-        const order = document.createElement('h3');
-        const delevry = document.createElement('p');
-        order.textContent = joke.setup;
-        delevry.textContent = joke.delivery;
-        art.appendChild(order);
-        art.appendChild(delevry);
-      }
-    } else {
-      throw new Error('Impossible de contacter le serveur')
-    }
-  }
-  fetchUsers()
+<script src="/javascript/home.js">
   let dropdownButton = document.getElementById('dropdownButton');
   let dropdownMenu = document.getElementById('dropdownMenu');
 

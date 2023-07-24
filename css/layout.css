@@ -2,12 +2,6 @@ header{
   background: blanchedalmond;
   padding: 0 10px;
 }
-main{
-  background: aquamarine;
-}
-footer{
-  background: blanchedalmond;
-}
 .dropdown-button{
   background-color: #f9f9f9;
   min-width: 160px;
@@ -38,4 +32,10 @@ footer{
 .dropdown-content a:hover {background-color: #f1f1f1;}
 .border {
   border: solid black 2px;
+}
+main{
+  background: aquamarine;
+}
+footer{
+  background: blanchedalmond;
 }
