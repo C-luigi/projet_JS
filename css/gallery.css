@@ -1,14 +1,36 @@
+.debug{
+    border: solid red 2px;
+    width: 100%;
+}
 .carousel_contenair{
     border: solid black 2px;
 }
-.picture_contenair{
-    max-width: 300px;
-    padding: 20px;
-    margin: 0;
-    border: 1px solid #ccc;
-    box-shadow: 0 0 5px rgb(104, 53, 243);
+.gallery-button{
+    background-color: rgb(214,218,255, 0.7);
+    max-width: 60px;
+    max-height: 60px;
+    z-index: 1;
+    border-radius: 10px;
+    border: none;
 }
-.picture_contenair img {
-    max-width: 100%;
+#gallery {
+    width: auto;
+    display: flex;
+    margin: 0;
+    flex-wrap: wrap;
+}
+#gallery img {
+    max-width: 200px;
     height: auto;
+    margin: 10px;
+}
+#gallery.mosaic-view {
+    flex-direction: row;
+}
+#gallery.column-view {
+    flex-direction: column;
+}
+#gallery.column-view img {
+    flex-direction: column;
+    margin: 10px auto;
 }

@@ -15,7 +15,7 @@
         <h1>Blog articles en tous genres</h1>
     </div>
     <div class="dropdown">
-        <button id="dropdownButton" class="dropdown-button">Menu</button>
+        <button id="dropdownButton" class="dropdown-button"><img src="/picture/icon_menu_dropdown.svg" alt="img menu drop down" ></button>
         <div id="dropdownMenu" style="display: none;" class="dropdown-content">
             <a href="home.html">Accueil</a>
             <a href="gallery.html">Galerie</a>
@@ -27,17 +27,18 @@
     <section class="carousel_contenair">
         <p>Ici carouesel en cours de fabrication</p>
     </section>
-    <section class="feed_contenair">
-        <div class="picture_contenair">
+    <section>
+        <button id="mosaic-view" class="gallery-button"><img src="/picture/icon_gallery_mosaic.png" alt="img button mosaic view" ></button>
+        <button id="column-view" class="gallery-button"><img src="/picture/icon_test.png" alt="img button column view" ></button>
+        <div id="gallery" class="debug">
             <img src="/picture/beau-papillon-dans-nature.jpg" alt="img test" >
-        </div>
-        <div class="picture_contenair">
             <img src="/picture/beau-papillon-dans-nature.jpg" alt="img test" >
-        </div>
-        <div class="picture_contenair">
             <img src="/picture/beau-papillon-dans-nature.jpg" alt="img test" >
-        </div>
-        <div class="picture_contenair">
+            <img src="/picture/beau-papillon-dans-nature.jpg" alt="img test" >
+            <img src="/picture/beau-papillon-dans-nature.jpg" alt="img test" >
+            <img src="/picture/beau-papillon-dans-nature.jpg" alt="img test" >
+            <img src="/picture/beau-papillon-dans-nature.jpg" alt="img test" >
+            <img src="/picture/beau-papillon-dans-nature.jpg" alt="img test" >
             <img src="/picture/beau-papillon-dans-nature.jpg" alt="img test" >
         </div>
     </section>
@@ -60,6 +61,7 @@
         </ul>
     </div>
 </footer>
+<script src="/javascript/gallery.js"></script>
 <script>
     let dropdownButton = document.getElementById('dropdownButton');
     let dropdownMenu = document.getElementById('dropdownMenu');
