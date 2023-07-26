@@ -9,7 +9,7 @@
     }
     #gallery img {
         max-width: 300px;
-        height: auto;
+        height: 200px;
         margin: 10px;
     }
 }
