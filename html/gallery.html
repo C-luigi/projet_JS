@@ -30,8 +30,10 @@
     <section>
         <button id="mosaic-view" class="gallery-button"><img src="/picture/icon_gallery_mosaic.png" alt="img button mosaic view" ></button>
         <button id="column-view" class="gallery-button"><img src="/picture/icon_test.png" alt="img button column view" ></button>
-        <input type="text" id="imageUrl" placeholder="Entrez l'URL de l'image">
-        <button onclick="addImage()">Ajouter l'Image</button>
+        <form id="urlForm">
+            <input type="text" id="urlInput" placeholder="Entrez une URL ici">
+            <input type="submit" value="Valider">
+        </form>
         <div id="gallery" class="debug">
             <img src="/picture/beau-papillon-dans-nature.jpg" alt="img test" >
             <img src="/picture/beau-papillon-dans-nature.jpg" alt="img test" >
