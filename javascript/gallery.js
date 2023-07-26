@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 })
                 .catch(error => console.error('Erreur de fetch: ', error));
+            document.getElementById("urlForm").reset();
         }
     });
 });

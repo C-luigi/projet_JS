@@ -35,4 +35,5 @@ document.getElementById("formulaire").addEventListener("submit", function(event)
         art.appendChild(delevry);
         art.insertBefore(delevry, art.children[0]);
     }
+    document.getElementById("formulaire").reset();
 });
