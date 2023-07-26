@@ -40,7 +40,7 @@ document.getElementById("formulaire").addEventListener("submit", function(event)
     document.getElementById("formulaire").reset();
 });
 function deleteElements(classe) {
-    var elements = document.getElementsByClassName(classe);
+    let elements = document.getElementsByClassName(classe);
     if(elements.length > 0) {
         elements[elements.length - 1].parentNode.removeChild(elements[elements.length - 1]);
     }
