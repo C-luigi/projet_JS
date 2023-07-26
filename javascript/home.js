@@ -2,16 +2,17 @@ async function fetchUsers() {
     const r = await fetch('https://v2.jokeapi.dev/joke/Any?lang=fr&amount=10');
     if (r.ok === true) {
         const json = await r.json();
-        // for (let i = 0; i < r.json(); i++){
         for (const joke of json.jokes) {
             console.log(joke)
             const art = document.querySelector('article');
-            const order = document.createElement('h3');
-            const delevry = document.createElement('p');
+            const ul = document.createElement('ul');
+            const order = document.createElement('li');
+            const delevry = document.createElement('li');
             order.textContent = joke.setup;
             delevry.textContent = joke.delivery;
-            art.appendChild(order);
-            art.appendChild(delevry);
+            ul.appendChild(order);
+            ul.appendChild(delevry);
+            art.appendChild(ul);
         }
         return json.jokes;
     } else {
@@ -25,15 +26,26 @@ fetchUsers();
 // } );
 document.getElementById("formulaire").addEventListener("submit", function(event) {
     event.preventDefault();
-    var donneesFormulaire = new FormData(event.target);
-    for(let [name, value] of donneesFormulaire.entries()) {
+    let dataFormulaire = new FormData(event.target);
+    const art = document.querySelector('article');
+    const ul = document.createElement('ul');
+    ul.className = 'deletClass';
+    for(let [name, value] of dataFormulaire.entries()) {
         console.log(name, value);
-        const art = document.querySelector('article');
-        const order = document.createElement('h3');
-        const delevry = document.createElement('p');
+        const delevry = document.createElement('li');
         delevry.textContent = value;
-        art.appendChild(delevry);
-        art.insertBefore(delevry, art.children[0]);
+        ul.appendChild(delevry);
     }
+    art.appendChild(ul);
     document.getElementById("formulaire").reset();
+});
+function deleteElements(classe) {
+    let elements = document.getElementsByClassName(classe);
+    if(elements.length > 0) {
+        elements[elements.length - 1].parentNode.removeChild(elements[elements.length - 1]);
+    }
+}
+
+document.getElementById("deleteButton").addEventListener("click", function() {
+    deleteElements('deletClass');
 });

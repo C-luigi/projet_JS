@@ -1,3 +1,4 @@
+//fonctions qui attribut ou supprime des class en fonction du bouton cliqué
 document.getElementById('mosaic-view').addEventListener('click', function() {
     let gallery = document.getElementById('gallery');
     gallery.classList.remove('column-view');
@@ -9,6 +10,7 @@ document.getElementById('column-view').addEventListener('click', function() {
     gallery.classList.remove('mosaic-view');
     gallery.classList.add('column-view');
 });
+//fonction qui ajoute image par le billet d'une url vérifiée.
 document.addEventListener('DOMContentLoaded', function() {
     var form = document.getElementById('urlForm');
     form.addEventListener('submit', function(event) {
@@ -22,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     if(response.ok) {
                         let img = document.createElement('img');
                         img.src = url;
+                        img.className = 'deletClass';
                         document.getElementById('gallery').appendChild(img);
                     } else {
                         console.error('Erreur : URL invalide');
@@ -31,4 +34,14 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById("urlForm").reset();
         }
     });
+});
+function deleteElements(classe) {
+    var elements = document.getElementsByClassName(classe);
+    if(elements.length > 0) {
+        elements[elements.length - 1].parentNode.removeChild(elements[elements.length - 1]);
+    }
+}
+
+document.getElementById("deleteButton").addEventListener("click", function() {
+    deleteElements('deletClass');
 });
