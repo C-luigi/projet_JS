@@ -12,12 +12,14 @@ document.getElementById('column-view').addEventListener('click', function() {
 });
 //fonction qui ajoute image par le billet d'une url vérifiée.
 document.addEventListener('DOMContentLoaded', function() {
-    var form = document.getElementById('urlForm');
+    let form = document.getElementById('urlForm');
     form.addEventListener('submit', function(event) {
         event.preventDefault();
-        var url = document.getElementById('urlInput').value;
-        if (!(url.startsWith('http://') || url.startsWith('https://'))) {
-            alert('L\'URL doit commencer par "http://" ou "https://".');
+        let url = document.getElementById('urlInput').value;
+        let urlPattern = /^https?:\/\//i;
+        if (!urlPattern.test(url)) {
+            errorDiv.textContent = 'L\'URL doit commencer par "http://" ou "https://".';
+            errorDiv.style.color = 'white';
         } else {
             fetch(url)
                 .then(response => {
@@ -37,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 //fonction qui supprime la dernière photo ajoutée dans la galerie.
 function deleteElements(classe) {
-    var elements = document.getElementsByClassName(classe);
+    let elements = document.getElementsByClassName(classe);
     if(elements.length > 0) {
         elements[elements.length - 1].parentNode.removeChild(elements[elements.length - 1]);
     }

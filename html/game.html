@@ -25,10 +25,20 @@
 </header>
 <main>
   <section class="border">
-    <p>Ici jeux en cours de fabrication</p>
-  </section>
-  <section class="border">
-    <p>Ici jeux en cours de fabrication</p>
+    <h2>Pierre Feuille Ciseaux</h2>
+    <form id="urlForm">
+      <input type="text" id="playerInput" placeholder="Choix : pierre, feuille, ciseaux">
+      <button type="submit" id="buttonPlay">jouer</button>
+    </form>
+    <div id="playerAnswer" class="classGame">
+      <p>La réponse du joeur est :</p>
+    </div>
+    <div id="computerAnswer" class="classGame">
+      <p>La réponse du l'ordinateur est :</p>
+    </div>
+    <div id="winnerAnswer" class="classGame">
+      <p>Le gagnant est :</p>
+    </div>
   </section>
   <section class="border">
     <p>Ici jeux en cours de fabrication</p>
@@ -52,6 +62,7 @@
     </ul>
   </div>
 </footer>
+<script src="/javascript/game.js"></script>
 <script>
   let dropdownButton = document.getElementById('dropdownButton');
   let dropdownMenu = document.getElementById('dropdownMenu');
